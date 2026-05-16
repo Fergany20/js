@@ -1,0 +1,12 @@
+h4 {
+    min-width: fit-content;
+    max-width: 10em;
+    height: 3em;
+    text-align: center;
+    background-color: chocolate;
+    color: #fff;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
