@@ -5,17 +5,17 @@
 // document.getElementById('p').textContent = "hallo from js";
 // //-----------------------------//---------------------
 
-// //vareibles 
+// //vareibles
 // //numbers//
-// let age = 21;
+// let age1 = 21;
 // let year = 2026;
 // let price = 10.99;
 // //-----------------------------
-// console.log(`your age is ${age}`)
+// console.log(`your age is ${age1}`)
 // console.log(`this year is: ${year}`)
 // console.log(`the price is: ${price}`)
 // //-----------------------------
-// console.log(typeof age)
+// console.log(typeof age1)
 // console.log(typeof year)
 // console.log(typeof price)
 // //-----------------------------//---------------------
@@ -66,7 +66,7 @@
 // students %= 2  //students = students%2;
 // extraStudents = students % 2;  //students = students%2;
 // //-----------------------------//---------------------
-// //increment and decrement 
+// //increment and decrement
 // //++ and --
 // students++;  //students = students+1;
 // students--;  //students = students-1;
@@ -84,13 +84,13 @@
 // console.log(`this result is : ${result}`);
 // //-----------------------------//---------------------
 
-// //accept input from user 
+// //accept input from user
 // // esay way == window.promt()
 // let phoneNumber;
 // // phoneNumber = window.prompt("set ur phone num here");
 // console.log(`your phone number is : ${phoneNumber}`);
 // //-----------------------------
-// // pro way  
+// // pro way
 // let myRam;
 // document.getElementById("btn_checker").onclick = function () {
 //     myRam = document.getElementById("rem_checker").value;
@@ -99,7 +99,7 @@
 // //-----------------------------//---------------------
 
 // // Type conversion 💱
-// // convert typeof : 
+// // convert typeof :
 // // number
 // // string
 // // boolean
@@ -120,13 +120,13 @@
 // const PI = 3.14159;  //can't change
 // let circumference;
 // //-----------------------------
-// // ez way 2 calc circumference of circle 
+// // ez way 2 calc circumference of circle
 // let radius = window.prompt("enter radius");
 // radius = Number(radius);
 // circumference = 2 * PI * radius;
 // console.log(`the circumference of the circle is ${circumference}`);
 // //-----------------------------
-// // pro way 2 calc circumference of circle 
+// // pro way 2 calc circumference of circle
 // document.getElementById("btn_circumference").onclick = function () {
 //     radius = document.getElementById("radius_input").value;
 //     radius = Number(radius);
@@ -197,59 +197,303 @@
 // let random = Math.random() * 6 +1; //between 0 and 5 +1 so fisnal value is 0 6
 // store = Math.trunc(random);
 // console.log(store); //random number between 0 and 5
-//-----------------------------//---------------------
+// //-----------------------------//---------------------
 
-//if statments
-let hours=13;
-if(hours<12){
-    console.log("good morning")
-}
-else{
-    console.log("good afternoon")
-}
-//-----------------------------
-//nested if statements 
-let age=29;
-let student=false;
-if(age<=21){
-    if(student){
-        console.log("you are a kid")
-    }
-    else{
-        console.log("you are a minor")
-    }
-}
-else{
-    console.log("you are a adult")
-}
-//-----------------------------
-//else if
-if (age>=60){
-    console.log("you are a senior")
-}
-else if (age>=21){
-    console.log("you are a adult")
-}
-else{
-    console.log("you are a kid")
-}
-//-----------------------------
-//Ternary operator
+// //if statments
+// let hours=13;
+// if(hours<12){
+//     console.log("good morning")
+// }
+// else{
+//     console.log("good afternoon")
+// }
+// //-----------------------------
+// //nested if statements
+// let age=29;
+// let student=false;
+// if(age<=21){
+//     if(student){
+//         console.log("you are a kid")
+//     }
+//     else{
+//         console.log("you are a minor")
+//     }
+// }
+// else{
+//     console.log("you are a adult")
+// }
+// //-----------------------------
+// //else if
+// if (age>=60){
+//     console.log("you are a senior")
+// }
+// else if (age>=21){
+//     console.log("you are a adult")
+// }
+// else{
+//     console.log("you are a kid")
+// }
+// //-----------------------------
+// //Ternary operator
+// //(condition) ? expression1 : expression2
+// let text = (age < 18) ? "Minor" : "Adult";
+// //-----------------------------
+// //ifApp
+// let myAge;
+// document.getElementById("submitStatment").onclick = function(){
+//     myAge=document.getElementById("ageStatment").value;
+//     myAge = Number(myAge);
+//     if(myAge>18){
+//         document.getElementById("ifMassage").textContent = `You can vote `+Math.trunc(myAge);
+
+//     }
+
+//     else{
+//         document.getElementById("ifMassage").textContent = `You can't vote `+Math.trunc(myAge);
+//     }
+// }
+// //-----------------------------//---------------------
+
+//checked statment
+//.checked like onclick
+const myCheckBox = document.getElementById("myCheckBox");
+const paymentVisa = document.getElementById("paymentVisa");
+const paymentMaster = document.getElementById("paymentMaster");
+const paymentPayPal = document.getElementById("paymentPayPal");
+const submitPayment = document.getElementById("submitPayment");
+
+submitPayment.onclick = function () {
+  if (myCheckBox.checked) {
+    document.getElementById("checkStatment").textContent =
+      "the btn have been checked";
+  } else {
+    document.getElementById("checkStatment").textContent =
+      "the btn havent been checked";
+  }
+
+  if (paymentPayPal.checked || paymentMaster.checked || paymentVisa.checked) {
+    document.getElementById("radioStatment").textContent = "value_checked";
+  } else {
+    document.getElementById("radioStatment").textContent = "not checked";
+  }
+};
+// //-----------------------------//---------------------
+
+//tenrey oporators
 //(condition) ? expression1 : expression2
-let text = (age < 18) ? "Minor" : "Adult";
+let likes = 12;
+likes > 100
+  ? console.log("u seems popular")
+  : console.log("u don't seems popular");
+// //-----------------------------//---------------------
+
+//switch statment
+// switch(value){
+//     case value1:
+//         expression1;
+//         break;
+//     case value2:
+//         expression2;
+//         break;
+//     default:
+//         expression3;
+//         break;
+// }
+//replacement for else if
 //-----------------------------
-//ifApp
-let myAge;
-document.getElementById("submitStatment").onclick = function(){
-    myAge=document.getElementById("ageStatment").value;
-    myAge = Number(myAge);
-    if(myAge>18){
-        document.getElementById("ifMassage").textContent = `You can vote `+Math.trunc(myAge);
-
-    }
-
-    else{
-        document.getElementById("ifMassage").textContent = `You can't vote `+Math.trunc(myAge);
-    }
+let day = 1; //1 to 7
+switch (day > 10) {
+  case 1:
+    console.log("the day is monday");
+    break;
+  case 2:
+    console.log("the day is tuesday");
+    break;
+  case 3:
+    console.log("the day is wednesday");
+    break;
+  case 4:
+    console.log("the day is thursday");
+    break;
+  case 5:
+    console.log("the day is friday");
+    break;
+  case 6:
+    console.log("the day is saturday");
+    break;
+  case 7:
+    console.log("the day is sunday");
+    break;
+  default:
+    console.log("invalid day");
+    break;
 }
-//--------------------------------------------------------
+//-----------------------------
+let myGrade = 90;
+let gradeResult;
+switch (true) {
+  case myGrade >= 90:
+    gradeResult = "A";
+    break;
+  case myGrade >= 80:
+    gradeResult = "B";
+    break;
+  case myGrade >= 70:
+    gradeResult = "C";
+    break;
+  case myGrade >= 60:
+    gradeResult = "D";
+    break;
+  default:
+    gradeResult = "F";
+    break;
+}
+console.log(gradeResult);
+// //-----------------------------//---------------------
+// String methods 🧵
+let user_x = "Ahmed";
+let user_I = "ahmedramadan@gamil.com";
+console.log(user_x.charAt(0)); //first value of the word
+console.log(user_x.indexOf("")); //index of value
+console.log(user_x.lastIndexOf("d")); //last index of value
+console.log(user_x.length); //lenght of word
+console.log(user_x.trim()); //remove any white space from start and end
+console.log(user_x.toUpperCase()); //convert to uppercase
+console.log(user_x.toLowerCase()); //convert to lowercase
+console.log(user_x.repeat(3)); //repeat the word
+if (user_x.startsWith("A")) {
+  console.log("the word starts with A");
+} else {
+  console.log("the word doesn't start with A");
+}
+//-----------------------------
+if (user_x.endsWith("d")) {
+  console.log("the word ends with d");
+} else {
+  console.log("the word doesn't end with d");
+}
+//-----------------------------
+if (user_x.includes(" ")) {
+  console.log("the word includes space");
+} else {
+  console.log("the word doesn't includes space");
+}
+//-----------------------------
+if (user_I.includes("@gamil.com")) {
+  console.log("u cant type ur email here");
+  user_I = user_I.replace("@gamil.com", "");
+  console.log(`ur name after modified is ${user_I}`);
+} else {
+  console.log("alles gut!");
+}
+//-----------------------------
+console.log(user_x.padEnd(10, ".")); // thats make end of value have just .... until it reach 10
+console.log(user_x.padStart(10, ".")); // thats make start of value have just .... until it reach 10
+// //-----------------------------//---------------------
+
+//String slicing ✂
+// sclicing for names  like example
+let fullyName = "jousfsse yostena";
+let numSpaceing = fullyName.indexOf(" "); //2 know where position of space
+console.log(numSpaceing);
+console.log(fullyName.slice(0, numSpaceing)); //print value before space
+console.log(fullyName.slice(numSpaceing)); //print value after space
+// //-----------------------------//---------------------
+
+//Method chaining ⛓
+//we use this method to make our code shorter and ez
+//example that except a name from windows prompwt
+let User = window.prompt("pls enter ur name here :");
+User = User.trim().charAt(0).toUpperCase() + User.trim().slice(1).toLowerCase();
+console.log(User);
+// //-----------------------------//---------------------\\-----------------------------\\
+
+// Logical operators ❗
+// && and
+// || or
+// ! not
+// //-----------------------------//---------------------\\-----------------------------\\
+
+//Strict equality 🟰
+//we have alot of condition about this
+// = that define or put value in a variable
+//== equality without checking the type
+//=== equality checking type and value we mean type like if (23 == "23") that is true but if we use === (23 === "23") that is false
+//-----------------------------//---------------------\\-----------------------------\\
+
+//while loop 🔄
+//condition first then the code will run until the condition is true
+//Example :
+let count = 1;
+while (count <= 5) {
+  console.log(count);
+  count++;
+}
+//----------------------------------------
+let userr = ""; //that will loob for user if it enter empty value
+while (userr === "") {
+  userr = window.prompt("pls enter ur name here :");
+}
+//----------------------------------------
+let veid = "";
+let gemme = "";
+while ((veid === "" && gemme === "") || veid === null || gemme === null) {
+  veid = window.prompt("pls enter ur name here :");
+  gemme = window.prompt("pls enter ur email here :");
+}
+//-----------------------------//---------------------\\-----------------------------\\
+
+//for loop
+// its same thing theres no difrrent on concept but how thats written
+// for (initialization;condition;expression){
+//     code
+// }
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+//-----------------------------//---------------------\\-----------------------------\\
+
+// Functions 📞
+// that accept from u prameters and then we call it in , void funcition
+
+function myBirthDAY(myName, myAge) {
+  console.log(`happy birthday ${myName} 
+  `);
+}
+myBirthDAY();
+
+function mins(x, y) {
+  return x - y;
+}
+console.log(mins(3, 2));
+
+function know(x) {
+  // if (x % 2 === 0) {
+  //   console.log(` number ${x} is even `);
+  // } else {
+  //   console.log(` number ${x} is odd`);
+  // }
+  return x % 2 === 0 ? true : false;
+}
+console.log(know(5));
+
+function validEmail(EMO) {
+  return EMO.includes("@gmail.com") ? true : false;
+}
+console.log(validEmail("ahmed@gmail.com"));
+
+// //-----------------------------//---------------------\-----------------------------\\
+
+//varible scoope
+// there local var and global  var
+// local:
+function local() {
+  let x = 10;
+  console.log(x); //10
+}
+// global:
+let y = 20;
+console.log(y); // 20
+
+// we can use global scope while there local scope by(.window)
+// //-----------------------------\---------------------\\-----------------------------\\
